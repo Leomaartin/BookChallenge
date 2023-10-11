@@ -1,0 +1,26 @@
+
+<div class="container">
+  <link href="/css/color.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+    <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/VisualEditor_-_Icon_-_Open-book-2.svg/1024px-VisualEditor_-_Icon_-_Open-book-2.svg.png" alt="twbs" width="50" height="50" class="rounded-circle flex-shrink-0">
+    </a>
+    <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+      <li><a href="/" class="nav-link px-2 link-dark">Libros</a></li>
+      <li><a href="/authors" class="nav-link px-2 link-dark">Autores</a></li>
+      <li><a href="/books/search" class="nav-link px-2 link-dark">Buscar</a></li>
+    </ul>
+    <% if(isAdmin==true) {%>
+      <p class="admin">Eres administrador<i class="fa-solid fa-crown"></i></p><% } %>
+    <% if (isLogged==false) { %>
+      <a href="/users/login" class="btn btn-outline-primary me-2">Iniciar sesión</a>
+      <a href="/users/register" class="btn btn-outline-primary me-2">Registrarse</a>
+    
+      
+    <% } else { %>
+      <a href="/logout" class="btn btn-outline-primary me-2">Cerrar Sesión</a>
+      <p class="logeo">Estas Logeado<i class="fa-solid fa-circle-user"></i></p>
+    <% } %>
+  </header>
+</div>
